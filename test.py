@@ -69,7 +69,7 @@ def collectLegoSets(startURL):
     newData.to_csv("lego2019.csv", index=False)
 
 data = collectLegoSets("https://brickset.com/sets/year-2019");
-data.to_csv("lego2019.csv", index=False)
+data.to_csv("F:/Streamlit/DataFrames/lego2019.csv", index=False)
 st.write("hello world")
-df = pd.read_csv("lego2019.csv")
+df = pd.read_csv("F:/Streamlit/DataFrames/lego2019.csv")
 st.line_chart(df)
