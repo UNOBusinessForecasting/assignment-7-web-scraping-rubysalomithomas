@@ -67,7 +67,8 @@ def collectLegoSets(startURL):
     else:
         return newData
     newData.to_csv("lego2019.csv", index=False)
+    st.write(newData)
+st.dataframe(data)
 
 data = collectLegoSets("https://brickset.com/sets/year-2019")
 st.write("hello world")
-st.dataframe(data)
