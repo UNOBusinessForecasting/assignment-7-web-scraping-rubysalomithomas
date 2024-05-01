@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import re
 import time
+import streamlit as st
 
 # A function to collect lego sets from search results on brickset.com
 def collectLegoSets(startURL):
@@ -66,3 +67,7 @@ def collectLegoSets(startURL):
     else:
         return newData
     newData.to_csv("lego2019.csv", index=False)
+
+st.write("hello world")
+df = pd.read_csv("lego2019.csv")
+st.line_chart(df)
