@@ -68,8 +68,6 @@ def collectLegoSets(startURL):
         return newData
     newData.to_csv("lego2019.csv", index=False)
 
-data = collectLegoSets("https://brickset.com/sets/year-2019");
-data.to_csv("F:/Streamlit/DataFrames/lego2019.csv", index=False)
+data = collectLegoSets("https://brickset.com/sets/year-2019")
 st.write("hello world")
-df = pd.read_csv("F:/Streamlit/DataFrames/lego2019.csv")
-st.dataframe(df)
+st.dataframe(data)
